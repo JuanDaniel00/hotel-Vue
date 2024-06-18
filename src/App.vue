@@ -15,9 +15,9 @@ export default {
 }
 </script>
 <template>
-  <q-layout view="hHr lpr fFf">
+  <q-layout view="hHr lpr fFf" class="animated-background">
 
-    <q-header reveal none class="bg-primary text-white header">
+    <q-header reveal none class="bg-primary text-white header ">
       <q-toolbar class="divBtnMenu">
         <div class="contBtnMenu" @click="toggleRightDrawer">
           <q-btn class="btnMenu " dense flat round icon="menu" size="20px" style="pointer-events: none;" />
@@ -25,7 +25,7 @@ export default {
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="rightDrawerOpen" side="right" overlay behavior="mobile" elevated>
+    <q-drawer v-model="rightDrawerOpen" side="right" behavior="mobile" elevated :overlay="false">
       <q-list class="menuLateral">
         <div class="divCloseMenu">
           <q-toolbar class="bg-primary text-white QCloseMenu">
@@ -36,54 +36,68 @@ export default {
         <div class="divContMenu">
           <div class="divItemsMenu">
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/">
+              <q-item-section avatar>
+                <q-icon name="home"></q-icon>
+              </q-item-section>
               <q-item-section>
                 <q-item-label>Inicio</q-item-label>
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/servicios">
+              <q-item-section avatar>
+                <q-icon name="build"></q-icon>
+              </q-item-section>
               <q-item-section>
                 <q-item-label>Servicios</q-item-label>
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/habitaciones">
+              <q-item-section avatar>
+                <q-icon name="hotel"></q-icon>
+              </q-item-section>
               <q-item-section>
                 <q-item-label>Habitaciones</q-item-label>
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/deportes">
+              <q-item-section avatar>
+                <q-icon name="sports_soccer"></q-icon>
+              </q-item-section>
               <q-item-section>
                 <q-item-label>Deportes</q-item-label>
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/contacto">
+              <q-item-section avatar>
+                <q-icon name="contacts"></q-icon>
+              </q-item-section>
               <q-item-section>
                 <q-item-label>Contacto</q-item-label>
               </q-item-section>
             </q-item>
-
           </div>
 
           <div class="divRedesMenu">
             <q-item clickable v-ripple>
               <q-item-section>
-                <q-icon name="fab fa-whatsapp"></q-icon>
+                <q-icon class="iconSocial" name="fab fa-whatsapp"></q-icon>
               </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
               <q-item-section>
-                <q-icon name="fab fa-instagram"></q-icon>
+                <q-icon class="iconSocial" name="fab fa-instagram"></q-icon>
               </q-item-section>
             </q-item>
 
             <q-item clickable v-ripple>
               <q-item-section>
-                <q-icon name="fab fa-twitter"></q-icon>
+                <q-icon class="iconSocial" name="fab fa-twitter"></q-icon>
               </q-item-section>
             </q-item>
           </div>
@@ -121,7 +135,7 @@ export default {
 }
 
 .contBtnMenu {
-  background-color: #1976D2;
+  background-color: #2e5845;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,11 +149,11 @@ export default {
 }
 
 .contBtnMenu:hover {
-  background-color: #1c4b7a;
+  background-color: #2e582f;
 }
 
 .btnMenu {
-  color: white;
+  color: #fffae0 !important;
   position: absolute;
   left: 19%;
   top: 19%;
@@ -148,7 +162,7 @@ export default {
 
 
 .menuLateral {
-  background-color: #1976D2;
+  background-color: #24533e;
   height: 100%;
 }
 
@@ -165,13 +179,13 @@ export default {
 }
 
 .QCloseMenu {
-  background-color: #ebeff4 !important;
+  background-color: #ffec84 !important;
   display: flex;
   justify-content: flex-end;
 }
 
 .btnCloseMenu {
-  color: #1976D2;
+  color: #2e5845 !important;
 }
 
 .divItemsMenu {
@@ -183,9 +197,9 @@ export default {
   justify-content: space-around;
 }
 
-.divRedesMenu q-item {
-  background-color: #ebeff4;
-  border-radius: 50%;
-  padding: 5px;
+
+.iconSocial {
+  color: #ffec84;
+  font-size: 20px;
 }
 </style>
