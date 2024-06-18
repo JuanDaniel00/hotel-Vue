@@ -1,32 +1,15 @@
+<!-- paleta de colores 
+ fondo: #fffae0, #fce09f, #2e5845, #2e582f
+  texto: #2e5845, #fffae0, #333, #fce09f, #000
+-->
 <template>
-  <div>
-    <div class="q-pa-md">
-      <div class="q-col-gutter-md row items-start">
-        <div class="col-4">
-          Ratio: 16/9<q-img
-            src="https://picsum.photos/500/300"
-            :ratio="16 / 9"
-          />
-        </div>
-        <div class="col-4">
-          Ratio: 1<q-img src="https://picsum.photos/500/300" :ratio="1" />
-        </div>
-        <div class="col-4">
-          Ratio: 4/3<q-img src="https://picsum.photos/500/300" :ratio="4 / 3" />
-        </div>
-      </div>
-    </div>
-  </div>
+
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 </script>
 
 <style scoped>
-h1 {
-    color: green;
-    background-color: black;
-}
+
 </style>
