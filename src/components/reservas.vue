@@ -1,6 +1,6 @@
-<script setup>import { ref } from 'vue';
+<script setup>
+import { ref } from 'vue';
 import Swal from 'sweetalert2';
-
 
 const tiposHabitaciones = ['Estándar', 'Deluxe', 'Suite'];
 
@@ -56,8 +56,6 @@ const submitForm = () => {
 };
 
 </script>
-
-
 
 <template>
   <q-page class="q-pa-md background">

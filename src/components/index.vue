@@ -1,3 +1,9 @@
+<script setup>
+import { ref } from "vue";
+
+const slide = ref(1);
+</script>
+
 <template>
   <q-page class="q-pa-md no-border">
     <div class="row full-width contenedor1">
@@ -50,11 +56,6 @@
   </q-page>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const slide = ref(1);
-</script>
 
 <style scoped>
 .contCards {

@@ -1,25 +1,3 @@
-<template>
-  <q-page class="q-pa-md ">
-    <div class="container background">
-      <h1 class="text-h4">Nuestras Habitaciones</h1>
-
-      <div class="row q-col-gutter-md">
-        <div v-for="habitacion in habitaciones" :key="habitacion.nombre" class="col-12 col-md-4">
-          <q-card class="my-card">
-            <q-img class="img" :src="habitacion.imagen" :ratio="16 / 9" />
-            <q-card-section>
-              <div class="text-h5">{{ habitacion.nombre }}</div>
-              <div class="text-subtitle2">{{ habitacion.descripcion }}</div>
-              <div class="text-caption">Precio por noche: ${{ habitacion.precio }}</div>
-              <q-btn to="/reservas" color="primary" label="Reservar" class="q-mt-md btn" no-caps />
-            </q-card-section>
-          </q-card>
-        </div>
-      </div>
-    </div>
-  </q-page>
-</template>
-
 <script setup>
 import { ref } from 'vue';
 
@@ -80,6 +58,30 @@ const habitaciones = ref([
   }
 ])
 </script>
+
+<template>
+  <q-page class="q-pa-md ">
+    <div class="container background">
+      <h1 class="text-h4">Nuestras Habitaciones</h1>
+
+      <div class="row q-col-gutter-md">
+        <div v-for="habitacion in habitaciones" :key="habitacion.nombre" class="col-12 col-md-4">
+          <q-card class="my-card">
+            <q-img class="img" :src="habitacion.imagen" :ratio="16 / 9" />
+            <q-card-section>
+              <div class="text-h5">{{ habitacion.nombre }}</div>
+              <div class="text-subtitle2">{{ habitacion.descripcion }}</div>
+              <div class="text-caption">Precio por noche: ${{ habitacion.precio }}</div>
+              <q-btn to="/reservas" color="primary" label="Reservar" class="q-mt-md btn" no-caps />
+            </q-card-section>
+          </q-card>
+        </div>
+      </div>
+    </div>
+  </q-page>
+</template>
+
+
 
 <style scoped>
 .background {
